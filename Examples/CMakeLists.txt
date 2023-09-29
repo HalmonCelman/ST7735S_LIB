@@ -11,6 +11,8 @@ ${CMAKE_CURRENT_SOURCE_DIR}/syscalls.c
 ${CMAKE_CURRENT_SOURCE_DIR}/sysmem.c
 )
 
+add_library(Startup ${STARTUP_SRC})
+
 #***
 # normally when you are writing your program it's recommended to add ST7735S library as a submodule in git and here as a subdirectory,
 # then you don't need to create library - it's created automatically
@@ -23,7 +25,6 @@ set(ST7735S_SRC
 )
 add_library(ST7735S ${ST7735S_SRC})
 #***
-add_library(Startup ${STARTUP_SRC})
 
 add_library(Driver driver.c)   # this lib you should create providing functions marked as extern in st7735s_config.h (see README)
 
@@ -41,7 +42,6 @@ target_compile_options(Driver PRIVATE ${COMPILE_FLAGS})
 
 target_link_libraries(${PROJECT_NAME} Startup)
 target_link_libraries(${PROJECT_NAME} ST7735S)
-target_compile_options(Driver PRIVATE ${COMPILE_FLAGS})
 
 # normally there should be your subdirectory instead of ../
 target_include_directories(${PROJECT_NAME} PRIVATE ../)

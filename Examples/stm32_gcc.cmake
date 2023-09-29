@@ -1,12 +1,14 @@
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 
-set(CMAKE_C_COMPILER "arm-none-eabi-gcc.exe")
-set(CMAKE_CXX_COMPILER "arm-none-eabi-g++.exe")
+set(CMAKE_C_COMPILER "arm-none-eabi-gcc")
+set(CMAKE_CXX_COMPILER "arm-none-eabi-g++")
 
-set(LINKER_FLAGS  -T ${CMAKE_CURRENT_SOURCE_DIR}/STM32F302R8TX_FLASH.ld)
-set(COMPILE_FLAGS -mcpu=cortex-m4 -mthumb -nostdlib)
+set(LINKER_FLAGS  -mcpu=cortex-m4 -mthumb -nostdlib -T ${CMAKE_CURRENT_SOURCE_DIR}/STM32F302R8TX_FLASH.ld)
+set(COMPILE_FLAGS -mcpu=cortex-m4 -mthumb )
 
+set(CMAKE_CROSSCOMPILING 1)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
