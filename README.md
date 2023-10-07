@@ -8,6 +8,7 @@
 
 ## Usage(recommended way):
 - Add as a submodule
+- **! if you are using some special compiler flags you should set them as properties (see below) !**
 - in CMakeLists.txt add as a subdirectory
 - write driver file: [How to write driver file?](driver_file.md)
 - create driver library
@@ -15,12 +16,21 @@
 - link ST7735S library to your project
 - Enjoy!
 
+### Compiler and Linker options
+if you want to pass your compiler or linker options( *without that even if code compiles it might not work* ) you should do it as below:
+```
+set_property(GLOBAL PROPERTY ST7735S_LINK_OPTIONS "<linker flags here>")
+set_property(GLOBAL PROPERTY ST7735S_LINK_OPTIONS "<compiler flags here>")
+```
+these two lines should be **before** add_subdirectory command
+
 ### Example CMakeLists.txt:
 ```
 cmake_minimum_required(VERSION 3.26.0)
 
 # here you should define toolchain file if its needed on your platform
 
+# here compiler and linker options (section above) 
 add_subdirectory(External/ST7735S)
 
 project(MyProject C CXX ASM)
