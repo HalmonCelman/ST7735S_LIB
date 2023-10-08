@@ -4,4 +4,8 @@ Makefile
 
 *.elf
 
+# config file
+st7735s_config.h
+
 [Bb][Uu][Ii][Ll][Dd]
+
