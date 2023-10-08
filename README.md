@@ -24,6 +24,21 @@ set_property(GLOBAL PROPERTY ST7735S_LINK_OPTIONS "<compiler flags here>")
 ```
 these two lines should be **before** add_subdirectory command
 
+### When you want to config something in submodule
+You know sometimes you may want to change something and you dont want from git to track these changes
+
+Then try this:
+```
+git update-index --assume-unchanged <file you want to change>
+```
+
+after that git will think that this file is still unchanged, when you want to trace back this file:
+
+```
+git update-index --no-assume-unchanged <file you want to change>
+```
+
+
 ### Example CMakeLists.txt:
 ```
 cmake_minimum_required(VERSION 3.26.0)
