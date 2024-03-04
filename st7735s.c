@@ -4,8 +4,13 @@
  *  Created on: Sep 13, 2023
  *      Author: KK
  */
+#include <stdint.h>
 #include "st7735s.h"
 #include "st7735s_cl.h"
+
+#if ST7735S_DISABLE_DELAY
+	extern void delay(uint16_t);
+#endif
 
 #if ST7735S_USE_FONT
 	#include "font8x8_basic.h"

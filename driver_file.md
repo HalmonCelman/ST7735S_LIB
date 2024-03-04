@@ -3,7 +3,7 @@ you just need to write few functions
 
 **If you have already delay() function you can set in *st7735s_config.h*  ST7735S_DISABLE_DELAY option to 1**
 
-then your delay will be used
+then your delay will be used: delay should be declared as `void delay(uint16_t);`
 
 ## Required functions
 - `void ST7735S_SPI_Init(void)`: this function should initialize your spi interface which is connected to your lcd
