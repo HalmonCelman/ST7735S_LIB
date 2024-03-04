@@ -8,8 +8,7 @@
 #ifndef ST7735S_H
 #define ST7735S_H
 
-#include <stdint.h>
-#include "st7735s_config.h"
+#include "../st7735s_config.h"
 
 
 void ST7735S_Init(void);

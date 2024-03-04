@@ -5,9 +5,13 @@
 - nothing have to be changed inside library, only one file for extern function needed
 - working on all platforms
 - highly customizable
+- **you can freely customize this library without changing code in this repository**
 
 ## Usage(recommended way):
 - Add as a submodule
+- copy config file `st7735s_config.h` into parent folder
+
+(f.e. if you have your submodule in External/ST7735S/ you should put config in External/ . *Config file in External/ST7735S/ is **unused** it exist only as template - so you should edit only config file in External/*)
 - **! if you are using some special compiler flags you should set them as properties (see below) !**
 - in CMakeLists.txt add as a subdirectory
 - write driver file: [How to write driver file?](driver_file.md)
