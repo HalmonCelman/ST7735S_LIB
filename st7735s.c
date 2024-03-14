@@ -136,12 +136,12 @@ void ST7735S_FillScreen(uint32_t color){
 
 void ST7735S__WriteCommand(uint8_t command){
 	ST7735S__LowDC();
-	SPI_SendRcv(command);
+	ST7735S_SPI_SendRcv(command);
 }
 
 void ST7735S__Write(uint8_t data){
 	ST7735S__HighDC();
-	SPI_SendRcv(data);
+	ST7735S_SPI_SendRcv(data);
 }
 
 void ST7735S__WriteColor(uint32_t color){ // not really working in 4-4-4 mode TBD
