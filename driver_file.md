@@ -7,7 +7,7 @@ then your delay will be used: delay should be declared as `void delay(uint16_t);
 
 ## Required functions
 - `void ST7735S_SPI_Init(void)`: this function should initialize your spi interface which is connected to your lcd
-- `uint8_t SPI_SendRcv(uint8_t data)`: this function should send and recieve 8 bytes by spi
+- `uint8_t ST7735S_SPI_SendRcv(uint8_t data)`: this function should send and recieve 8 bytes by spi
 - `void ST7735S_GPIO_Init(void)`: this function should initialize all your gpio pins( connected to lcd )
 - `void ST7735S__LowDC(void)`: this function should put your DC(data/command) pin into low state(0V)
 - `void ST7735S__HighDC(void)`: this function should put your DC(data/command) pin into hihg state(3,3V)

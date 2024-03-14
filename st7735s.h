@@ -10,7 +10,14 @@
 
 #include "../st7735s_config.h"
 
+//! functions - mcu dependent - implemented in st7735s_config.c !
+extern void ST7735S_SPI_Init(void);
+extern uint8_t ST7735S_SPI_SendRcv(uint8_t data);
+extern void ST7735S_GPIO_Init(void);
+extern void ST7735S__LowDC(void);
+extern void ST7735S__HighDC(void);
 
+//! functions independent
 void ST7735S_Init(void);
 void ST7735S_SetPixel(uint8_t x,uint8_t y,uint32_t color);
 void ST7735S_FillRect(uint8_t x,uint8_t y,uint8_t width,uint8_t height,uint32_t color);

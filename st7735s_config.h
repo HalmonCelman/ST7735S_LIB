@@ -8,6 +8,7 @@
 #ifndef ST7735S_CONFIG_H_
 #define ST7735S_CONFIG_H_
 
+#include <stdint.h>
 /*
  *	ST7735S_DISABLE_DELAY
  *	if you have your own implementation of delay() function you can set this option to 1
@@ -22,14 +23,6 @@
 
 	extern void ST7735S_DelayInterruptInit(void);
 #endif
-
-
-//! functions - mcu dependent - implemented in st7735s_config.c !
-extern void ST7735S_SPI_Init(void);
-extern uint8_t SPI_SendRcv(uint8_t data);
-extern void ST7735S_GPIO_Init(void);
-extern void ST7735S__LowDC(void);
-extern void ST7735S__HighDC(void);
 
 /*
  * features:
