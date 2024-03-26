@@ -63,4 +63,4 @@ target_link_library(MyProject ST7735S)
 
 ```
 
-you can also see example written for stm32f302 in [Examples repo](https://github.com/HalmonCelman/ST7735S_LIB_Examples)
+you can also see example written for stm32f302 in [Examples repo](https://github.com/HalmonCelman/Examples/tree/master/ST7735S)
