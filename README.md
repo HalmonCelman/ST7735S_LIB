@@ -24,7 +24,7 @@
 if you want to pass your compiler or linker options( *without that even if code compiles it might not work* ) you should do it as below:
 ```
 set_property(GLOBAL PROPERTY ST7735S_LINK_OPTIONS "<linker flags here>")
-set_property(GLOBAL PROPERTY ST7735S_LINK_OPTIONS "<compiler flags here>")
+set_property(GLOBAL PROPERTY ST7735S_COMPILE_OPTIONS "<compiler flags here>")
 ```
 these two lines should be **before** add_subdirectory command
 
